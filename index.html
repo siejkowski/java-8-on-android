@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Awesome Presentation</title>
+    <title>Java 8 on Android</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <style type="text/css">
 
@@ -129,13 +129,13 @@
 
 class: center, middle
 
-![android](http://techandsimple.files.wordpress.com/2010/10/android_upside_down.jpg)
+![android](img/android_upside_down.jpg)
 
 # Java 8 na Androidzie
 
 @_siejkowski
 
-![Default-aligned image](http://upload.wikimedia.org/wikipedia/commons/4/41/Duke_Wave.png)
+![Default-aligned image](img/Duke_Wave.png)
 
 ???
 
@@ -174,11 +174,11 @@ class: center
 
 ???
 
-Dlatego, że na Androidzie wcale nie pisze się w Javie. 
+Google nie może się dogadać z oracle, są w trakcie procesu o wykorzystanie Javy na androidzie.
 
-It runs a language that is identical to Java with a class library that is functionally equivalent to a subset of the Java class library (+ Android-specific libraries), on a virtual machine with a different instruction set.
+Dlatego, że na Androidzie wcale nie pisze się w Javie. Pisze się w języku składniowo i funkcjonalnie identycznym do Javy, ale uruchamianym na maszynie wirtualnej z innym zestawem instrukcji.
 
-Proces Oracle vs Google. Zanim się to skończy (a może i potem) Google musiałby napisać na Dalvika wszystko od zera. Nie dali znaku, że chcą to robić. Inne plany: ART?
+Google musiałby napisać Jave 8 na Dalvika od zera. Nie dali znaku, że chcą to robić. Inne plany: ART?
 
 Cóż zatem robić? Pozostaje nam tylko smutek. [switch!]
 
@@ -221,9 +221,17 @@ private Observable<File> downloadFileObservable() {
 
 ## λ λ λ λ λ λ λ λ λ λ λ λ λ λ λ λ λ λ
 
-??? 
+???
 
-lambdy. Andoroid jest sterowany zdarzeniami i musi wypychać pracę poza wątek główny - idealne zadanie dla callbacków i listenerów. Moim absolutnym faworytem w tej kwestii jest [switch!]
+lambdy. Andoroid (jak wszystkie mobilne) jest: 
+* sterowany zdarzeniami 
+* musi wypychać pracę poza wątek główny 
+
+Idealne zadanie dla callbacków i listenerów i jest ich rzeczywiście sporo. 
+
+Ale wszystko to boilerplate.
+
+Moim absolutnym faworytem w tej kwestii jest [switch!]
 
 ---
 
@@ -407,9 +415,6 @@ jak to zrobić:
 * wskazać pluginowi
 * skompilować aplikację z jdk8
 
-jak to działa:
-* patchuje android.jar
-
 ---
 
 background-image: url(img/android_studio.png)
@@ -417,7 +422,8 @@ background-image: url(img/android_studio.png)
 ???
 
 * android studio sam umie wsparcie dodać do wyrażeń z javy 8 (ale to się dynamicznie zmienia)
-* fani anta - jest też rozwiązanie dla was, opis w źródłach na końcu
+
+to nam pozwala korzystać z lambd na androidzie.
 
 jeśli ktoś zainspirowany chciałby czegoś więcej, to zawsze zostaje
 
@@ -435,7 +441,11 @@ scala na androidzie. ale to temat na zupełnie inną pogadankę.
 
 ---
 
-## resources:
+class: center, middle
+
+# dzięki za uwagę!
+
+## źródła:
 
 http://github.com/siejkowski/java-8-on-android
 
