@@ -124,7 +124,17 @@
 
     </style>
   </head>
-  <body onload="var slideshow = remark.create();">
+  <body onload="var slideshow = remark.create({
+  ratio: '4:3',
+
+  navigation: {
+    scroll: true,
+    touch: true
+  },
+
+  highlightStyle: 'monokai',
+  
+  });">
     <textarea id="source">
 
 class: center, middle
